@@ -1,9 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Museum.Models;
 using System.Collections.Generic;
-using Museum.Models;
 
-namespace Museum.Data
+namespace Museum.Models
 {
     public class AppDbContext : DbContext
     {

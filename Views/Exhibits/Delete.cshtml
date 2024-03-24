@@ -1,25 +1,23 @@
 ﻿@model Museum.Models.Exhibit
 
-<h2>Edit Exhibit</h2>
+<h2>Delete Exhibit</h2>
 
-<form asp-action="Edit" method="post">
+<form asp-action="DeleteConfirmed" method="post">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
     <input type="hidden" asp-for="Id" />
 
     <div class="form-group">
         <label asp-for="Name" class="control-label">Exhibit Name:</label>
-        <input asp-for="Name" class="form-control" />
-        <span asp-validation-for="Name" class="text-danger"></span>
+        <input asp-for="Name" class="form-control" readonly />
     </div>
 
     <div class="form-group">
         <label asp-for="Description" class="control-label">Description:</label>
-        <textarea asp-for="Description" class="form-control"></textarea>
-        <span asp-validation-for="Description" class="text-danger"></span>
+        <textarea asp-for="Description" class="form-control" readonly></textarea>
     </div>
 
     <div class="form-group">
-        <button type="submit" class="btn btn-primary">Save Changes</button>
+        <button type="submit" class="btn btn-danger">Delete Exhibit</button>
         <a asp-action="Index" class="btn btn-secondary">Back to List</a>
     </div>
 </form>
