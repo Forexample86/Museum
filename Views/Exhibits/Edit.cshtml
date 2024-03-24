@@ -1,0 +1,16 @@
+﻿@model Exhibition
+
+<h2>Edit Exhibition</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    <label for="Name">Name:</label>
+    <input type="text" id="Name" name="Name" asp-for="Name" required>
+    <br />
+    <label for="Description">Description:</label>
+    <textarea id="Description" name="Description" asp-for="Description" required></textarea>
+    <br />
+    <button type="submit">Save Changes</button>
+</form>
+
+<a asp-action="Index">Back to List</a>

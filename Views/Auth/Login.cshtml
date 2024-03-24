@@ -1,0 +1,11 @@
+﻿@model Museum.Models.User
+
+<form asp-action="Login" asp-controller="Auth" method="post">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="Username" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="Password" required>
+
+    <button type="submit">Login</button>
+</form>
