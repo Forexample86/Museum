@@ -1,16 +1,19 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations;
 
 namespace Museum.Models
 {
-    public class User
+    public class User : IdentityUser
     {
-        public int Id { get; set; }
-
         [Required]
         public string Username { get; set; }
 
         [Required]
-        public string Password { get; set; } // В реальном приложении пароль должен быть захеширован
+        [DataType(DataType.Password)]
+        public string Password { get; set; }
+
+        [Display(Name = "Remember me?")]
+        public bool RememberMe { get; set; }
     }
 
 }
